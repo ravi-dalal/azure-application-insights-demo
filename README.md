@@ -9,18 +9,18 @@ This repository contains 3 code repositories:
 3. service2 - spring boot microservice
 
 Set following environment variables before running the service2:  
-export INSTRUMENTAION_KEY=*your azure application insights instrumentation key*  
+export INSTRUMENTAION_KEY=#*your azure application insights instrumentation key*#  
 
 Set following environment variables before running the service1:  
-export INSTRUMENTAION_KEY=*your azure application insights instrumentation key*  
-export SERVICE2_URL=*service2 url*/hello2 
+export INSTRUMENTAION_KEY=#*your azure application insights instrumentation key*#  
+export SERVICE2_URL=#*service2 url*#/hello2 
 
 # How to run backend services
 1. Download azure application insights Java agent from:  
 https://github.com/microsoft/ApplicationInsights-Java/releases/download/2.6.1/applicationinsights-agent-2.6.1.jar  
 
 2. Execute following command to run the service:  
-java -javaagent:*full path to agent*/applicationinsights-agent-2.6.1.jar -jar *name of jar file (service1.jar or service2.jar)*
+java -javaagent:#*full path to agent*#/applicationinsights-agent-2.6.1.jar -jar #*name of jar file (service1.jar or service2.jar)*#
 
 **NOTE:** place the AI-Agent.xml from Agent-Configuration folder into the folder that container Java agent jar file
 
