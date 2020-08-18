@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: demo-service1
+server:
+  port: 9090
+
+azure:
+  application-insights:
+    instrumentation-key: ${INSTRUMENTAION_KEY}
+    enabled: true
+    web:
+      enabled: true
+      enable-W3C: true
+ #     enable-W3C-backcompat-mode: true
+
+sample:
+  app:
+    service2: ${SERVICE2_URL}
