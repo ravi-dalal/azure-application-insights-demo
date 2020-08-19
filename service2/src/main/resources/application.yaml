@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo-service1
+    name: demo-service2
 server:
   port: 9091
 
