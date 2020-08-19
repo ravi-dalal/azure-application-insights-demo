@@ -1,6 +1,6 @@
 # Azure Application Insights Demo
 
-The purpose of this repository is to demonstrate W3C distributed tracing using Azure Application Insights. The code contains an Angular client and two Spring Boot backend APIs. The Azure Application Insights distributed tracing also works well with an **Azure API Management** layer between client and the backend APIs.
+This repository contains code to demonstrate W3C distributed tracing using Azure Application Insights. The code contains an Angular client and two Spring Boot backend APIs. The Azure Application Insights distributed tracing also works well with an **Azure API Management** layer between client and the backend APIs.
 
 This repository contains 3 code repositories:
 
