@@ -13,7 +13,6 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.microsoft.azure:applicationinsights-spring-boot-starter:2.6.1'
 	implementation 'com.microsoft.azure:applicationinsights-logging-logback:2.6.1'
