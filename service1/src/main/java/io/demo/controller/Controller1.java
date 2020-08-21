@@ -23,9 +23,8 @@ public class Controller1 {
 	@GetMapping(path="/hello1")
 	public ResponseEntity<String> helloMessage () {
 		logger.info("In Service 1 Controller method");
-		String returnMessage = "Hello!! "+service.getMessage()
-									+ "^^^^" + service.getService2Message();
-		
+		String returnMessage = service.getMessage();
+		returnMessage += " " + service.getService2Message(); 
 		return ResponseEntity.ok(returnMessage);
 	}
 	

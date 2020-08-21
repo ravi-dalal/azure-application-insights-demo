@@ -22,7 +22,7 @@ public class Controller2 {
 	@GetMapping(path="/hello2")
 	public ResponseEntity<String> helloMessage () {
 		logger.info("In Service 2 Controller method");
-		return ResponseEntity.ok("Hello!! "+service.getMessage());
+		return ResponseEntity.ok(service.getMessage());
 	}
 
 }

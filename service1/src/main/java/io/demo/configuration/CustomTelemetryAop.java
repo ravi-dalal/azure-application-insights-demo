@@ -31,13 +31,13 @@ public class CustomTelemetryAop {
 		Object result;
 		Instant startTime = Instant.now();
 		RemoteDependencyTelemetry dependencyTelemetry = new RemoteDependencyTelemetry();
+		RequestTelemetry requestTelemetry = ThreadContext.getRequestTelemetryContext().getHttpRequestTelemetry();
 
 		try {
 
 			MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 			Method method = signature.getMethod();
 			CustomTelemetry customTelemetry = method.getAnnotation(CustomTelemetry.class);
-			RequestTelemetry requestTelemetry = ThreadContext.getRequestTelemetryContext().getHttpRequestTelemetry();
 			logger.debug("Azure Application Insights Request Id={}", requestTelemetry.getId());
 			startTime = Instant.now();
 			dependencyTelemetry.setId(requestTelemetry.getId());
