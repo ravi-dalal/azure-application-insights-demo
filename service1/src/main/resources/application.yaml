@@ -16,6 +16,10 @@ azure:
     web:
       enabled: true
       enable-W3C: true
+  cosmosdb:
+    uri: ${COSMOSDB_URI}
+    key: ${COSMOSDB_KEY}
+    database: ${DATABASE}
 
 sample:
   app:

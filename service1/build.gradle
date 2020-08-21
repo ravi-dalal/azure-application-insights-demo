@@ -18,5 +18,6 @@ dependencies {
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'com.microsoft.azure:applicationinsights-spring-boot-starter:2.6.1'
 	implementation 'com.microsoft.azure:applicationinsights-logging-logback:2.6.1'
+	implementation 'com.microsoft.azure:azure-cosmosdb-spring-boot-starter:2.2.4'
 }
 

@@ -17,6 +17,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import io.demo.configuration.CustomTelemetry;
+import io.demo.cosmosdb.dto.DemoContainer;
+import io.demo.cosmosdb.repository.DemoRepository;
 
 @Service
 public class Service1 {
@@ -26,15 +28,23 @@ public class Service1 {
 	@Autowired
 	private HttpServletRequest request;
 	
+	@Autowired
+	private DemoRepository demoRepository;
+	
 	@Value("${sample.app.service2}")
 	private String service2Url;
 	
+	@CustomTelemetry(type = "Cosmos DB")
 	public String getMessage () {
 		logger.info("In Service 1 getMessage() method");
-		return "This is Service 1!";
+		Iterable<DemoContainer> demoContainer = demoRepository.findAll();
+		String message = "";
+		for (DemoContainer document : demoContainer) {
+			message += document.getValue() + " ";
+		}
+		return message;
 	}
 	
-	@CustomTelemetry(type = "Rest API")
 	public String getService2Message () {
 		Iterator<String> headersIter = request.getHeaderNames().asIterator();
 		while (headersIter.hasNext()) {
