@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.demo.service.Service1;
@@ -22,9 +23,20 @@ public class Controller1 {
 	@GetMapping(path="/hello1")
 	public ResponseEntity<String> helloMessage () {
 		logger.info("In Service 1 Controller method");
-		String returnMessage = "Hello!! "+service.getMessage() + "<br>" + service.getService2Message();
+		String returnMessage = "Hello!! "+service.getMessage()
+									+ "^^^^" + service.getService2Message();
 		
 		return ResponseEntity.ok(returnMessage);
+	}
+	
+	@GetMapping(path="/")
+	public ResponseEntity<String> home () {
+		return ResponseEntity.ok("Hello All!!");
+	}
+	
+	@PostMapping(path="/test")
+	public ResponseEntity<String> test () {
+		return ResponseEntity.ok("Hello Test!!");
 	}
 
 }

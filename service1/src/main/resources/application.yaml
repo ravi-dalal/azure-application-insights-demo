@@ -4,6 +4,11 @@ spring:
 server:
   port: 9090
 
+#logging:
+#  level:
+#    org:
+#      springframework: DEBUG
+
 azure:
   application-insights:
     instrumentation-key: ${INSTRUMENTAION_KEY}
@@ -11,7 +16,6 @@ azure:
     web:
       enabled: true
       enable-W3C: true
- #     enable-W3C-backcompat-mode: true
 
 sample:
   app:

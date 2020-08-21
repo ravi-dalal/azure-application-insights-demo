@@ -11,4 +11,4 @@ azure:
     web:
       enabled: true
       enable-W3C: true
- #     enable-W3C-backcompat-mode: true
+ 

@@ -2,7 +2,7 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <!-- <springProperty scope="context" name="INSTRUMENTATION_KEY"
+   <!--  <springProperty scope="context" name="INSTRUMENTATION_KEY"
                     source="azure.application-insights.instrumentation-key"/> -->
 
     <appender name="aiAppender"

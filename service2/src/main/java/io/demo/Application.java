@@ -13,14 +13,3 @@ public class Application
 	
 }
 
-
-
-/*
- * 
- * 
-curl --location --request GET 'http://localhost:9090/api/messages' 
---header 'X-B3-TraceId: 2a53d9df3025c35d' \
---header 'X-B3-SpanId: 2a53d9df3025c35d'
-*
-*
-*/
