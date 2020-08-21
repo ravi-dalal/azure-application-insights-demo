@@ -14,6 +14,9 @@ export INSTRUMENTAION_KEY=#*your azure application insights instrumentation key*
 Set following environment variables before running the service1:  
 export INSTRUMENTAION_KEY=#*your azure application insights instrumentation key*#  
 export SERVICE2_URL=#*service2 url*#/hello2 
+export COSMOSDB_URI=#*Cosmos DB URI*#
+export COSMOSDB_KEY=#*Cosmos DB Key*#
+export DATABASE=#*Database Name*#
 
 # How to run backend services
 1. Download azure application insights Java agent from:  
