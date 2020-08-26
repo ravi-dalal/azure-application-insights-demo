@@ -35,3 +35,7 @@ java -javaagent:#*full path to agent*#/applicationinsights-agent-2.6.1.jar -jar 
 4. Run 'ng serve' to run the application. The configured port for client application is 8080
 5. Use http://localhost:8080 (assuming application is running on localhost) to access the application
 
+# Azure API Management configuration for Application Insights
+
+![Azure API Management Configuration](Azure-APIM-AppInsights.png)
+Format: ![Alt Text](url)
