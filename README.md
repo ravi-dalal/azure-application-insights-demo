@@ -40,5 +40,8 @@ java -javaagent:#*full path to agent*#/applicationinsights-agent-2.6.1.jar -jar 
 
 ## Azure API Management configuration for Application Insights
 
-![Azure API Management Configuration](Azure-APIM-AppInsights.png)
+![Azure API Management Configuration](/images/Azure-APIM-AppInsights.png)
 
+The end to end transaction details in Applications Insights will look like this:
+
+![End to end transaction](/images/Azure-AppInsights-E2E-Tracing.png)
