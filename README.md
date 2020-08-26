@@ -2,6 +2,8 @@
 
 This repository contains code to demonstrate W3C distributed tracing using Azure Application Insights. The code contains an Angular client and two Spring Boot backend APIs. The Azure Application Insights distributed tracing also works well with an **Azure API Management** layer between client and the backend APIs.
 
+*The new codeless monitoring agent (https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-in-process-agent) makes it possible to trace the transactions without adding Azure Application Insights SDK to the Java code. However, it is still in preview.*
+
 This repository contains 3 code repositories:
 
 1. client - angular client to call backend api
