@@ -1,6 +1,8 @@
-# Azure Application Insights Demo
+# Azure Application Insights Demo  
 
 This repository contains code to demonstrate W3C distributed tracing using Azure Application Insights. The code contains an Angular client and two Spring Boot backend APIs. The Azure Application Insights distributed tracing also works well with an **Azure API Management** layer between client and the backend APIs.
+
+*The new codeless monitoring agent (https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-in-process-agent) makes it possible to trace the transactions without adding Azure Application Insights SDK to the Java code. However, it is still in preview.*
 
 This repository contains 3 code repositories:
 
@@ -18,7 +20,8 @@ export COSMOSDB_URI=#*Cosmos DB URI*#
 export COSMOSDB_KEY=#*Cosmos DB Key*#  
 export DATABASE=#*Database Name*#  
 
-# How to run backend services
+## How to run backend services  
+  
 1. Download azure application insights Java agent from:  
 https://github.com/microsoft/ApplicationInsights-Java/releases/download/2.6.1/applicationinsights-agent-2.6.1.jar  
 
@@ -27,7 +30,7 @@ java -javaagent:#*full path to agent*#/applicationinsights-agent-2.6.1.jar -jar 
 
 **NOTE:** place the AI-Agent.xml from Agent-Configuration folder into the folder that container Java agent jar file
 
-# How to run client
+## How to run client
 
 1. Enter Azure application insights instrumentation key and *service1* URL in src/environments/environment.ts
 2. Run 'npm install' to download all the dependencies
@@ -35,3 +38,10 @@ java -javaagent:#*full path to agent*#/applicationinsights-agent-2.6.1.jar -jar 
 4. Run 'ng serve' to run the application. The configured port for client application is 8080
 5. Use http://localhost:8080 (assuming application is running on localhost) to access the application
 
+## Azure API Management configuration for Application Insights
+
+![Azure API Management Configuration](/images/Azure-APIM-AppInsights.png)
+
+The end to end transaction details in Applications Insights will look like this:
+
+![End to end transaction](/images/Azure-AppInsights-E2E-Tracing.png)
