@@ -38,4 +38,4 @@ java -javaagent:#*full path to agent*#/applicationinsights-agent-2.6.1.jar -jar 
 # Azure API Management configuration for Application Insights
 
 ![Azure API Management Configuration](Azure-APIM-AppInsights.png)
-Format: ![Alt Text](url)
+
