@@ -3,12 +3,7 @@ spring:
     name: demo-service1
 server:
   port: 9090
-
-#logging:
-#  level:
-#    org:
-#      springframework: DEBUG
-
+  
 azure:
   application-insights:
     instrumentation-key: ${INSTRUMENTAION_KEY}
@@ -24,3 +19,12 @@ azure:
 sample:
   app:
     service2: ${SERVICE2_URL}
+    
+logging:
+  level: 
+    org:
+      springframework: DEBUG
+      apache:                  # debug logging for RestTemplate using Apache HttpClient
+        http: DEBUG
+    httpclient:
+      wire: DEBUG    
